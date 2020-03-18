@@ -18,10 +18,16 @@ public class AccountFeature extends SubBase {
         }
     }
 
-    @Test(priority = 2, enabled = true)
+    @Test(priority = 2, enabled = false)
     public void logout() throws InterruptedException {
         loginToAccount();
         logoutFromAccount();
     }
 
+    @Test(priority = 3, enabled = true)
+    public void links() throws InterruptedException {
+        loginToAccount();
+        clickOnLinks();
+        logoutFromAccount();
+    }
 }

@@ -1,4 +1,5 @@
 import pageobject.AccountPage;
+import pageobject.HomePageLinks;
 
 import java.io.IOException;
 
@@ -21,6 +22,12 @@ public class SubBase extends Base {
     public void logoutFromAccount() throws InterruptedException {
         clickByXpath(AccountPage.logoLinkXpath);
         clickByXpath(AccountPage.logoutLinkXpath);
+    }
+
+    public void clickOnLinks() throws InterruptedException {
+        clickByXpath(HomePageLinks.boardsLinkXpath);
+        clickByXpath(HomePageLinks.classesLinkXpath);
+        clickByXpath(HomePageLinks.bunceesLinkXpath);
     }
 
 
